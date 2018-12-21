@@ -1,0 +1,22 @@
+[Unit]
+Description=electrobytes's distributed currency daemon
+After=network.target
+
+[Service]
+User=electrobytescore
+Group=electrobytescore
+
+Type=forking
+PIDFile=/var/lib/electrobytesd/electrobytesd.pid
+ExecStart=/usr/bin/electrobytesd -daemon -pid=/var/lib/electrobytesd/electrobytesd.pid \
+-conf=/etc/electrobytescore/electrobytes.conf -datadir=/var/lib/electrobytesd -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

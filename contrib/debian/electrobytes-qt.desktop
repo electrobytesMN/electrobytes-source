@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=electrobytes Core
+Comment=electrobytes P2P Cryptocurrency
+Comment[de]=Verbinde mit dem electrobytes peer-to-peer Netzwerk
+Comment[fr]=electrobytes, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=electrobytes, eşten eşe kriptografik sanal para birimi
+Exec=electrobytes-qt %u
+Terminal=false
+Type=Application
+Icon=electrobytes128
+MimeType=x-scheme-handler/electrobytes;
+Categories=Office;Finance;
